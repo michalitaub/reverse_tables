@@ -1,0 +1,62 @@
+/* רקע כללי */
+body {
+    background: #f7f7f7;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* כותרת ראשית */
+h1 {
+    margin-bottom: 1.5rem;
+    color: #343a40;
+}
+
+/* אזור גרירה */
+#drop-zone {
+    border: 2px dashed #6c757d;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    color: #6c757d;
+    background: #ffffff;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#drop-zone.dragover {
+    background-color: #e9ecef;
+}
+
+/* רשימת עמודים */
+#pages-list {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* כפתור */
+button.btn-primary {
+    padding: 10px 30px;
+    font-size: 1.1rem;
+}
+
+#pages-list .form-check-label {
+    order: 2;  /* שומר על הטקסט אחרי התיבה */
+}
+#pages-list .form-check-input {
+    order: 1;
+}
+
+#pages-list .form-check {
+    direction: rtl;           /* שומר על כתיבה עברית */
+    display: flex;
+    justify-content: flex-start; /* מציב בצד שמאל */
+    gap: 1.8rem;
+}
+
+/* מצמיד את כל הרשימה לשמאל */
+#pages-list .form-check-label .form-check-input {
+  text-align: right;
+}
+
+
