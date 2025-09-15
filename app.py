@@ -2,39 +2,6 @@
 # import tempfile, os
 # from pathlib import Path
 # import subprocess
-#
-# app = Flask(__name__)
-#
-# @app.route("/", methods=["GET", "POST"])
-# def index():
-#     if request.method == "POST":
-#         file = request.files["pdf"]
-#         pages = request.form.get("pages", "")
-#
-#         # שמירה זמנית
-#         tmp_in = tempfile.NamedTemporaryFile(delete=False, suffix=".pdf")
-#         file.save(tmp_in.name)
-#         tmp_out = tempfile.NamedTemporaryFile(delete=False, suffix=".pdf")
-#         tmp_out.close()
-#
-#         # קריאה לסקריפט שלך (כמודול או subprocess)
-#         cmd = ["python", "withPages.py", tmp_in.name, tmp_out.name, "--pages", pages]
-#         subprocess.run(cmd, check=True)
-#
-#         return send_file(tmp_out.name, as_attachment=True, download_name="output.pdf")
-#
-#     return '''
-#     <h1>הפוך טבלאות PDF</h1>
-#     <form method="post" enctype="multipart/form-data">
-#       <input type="file" name="pdf" required><br><br>
-#       <label>עמודים (למשל: 1,3,5-7):</label><br>
-#       <input type="text" name="pages"><br><br>
-#       <button type="submit">העלה והפוך</button>
-#     </form>
-#     '''
-#
-# if __name__ == "__main__":
-#     app.run(debug=True)
 
 from flask import Flask, render_template, request, send_file, jsonify
 import tempfile, os, subprocess

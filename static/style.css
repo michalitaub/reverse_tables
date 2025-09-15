@@ -47,16 +47,45 @@ button.btn-primary {
     order: 1;
 }
 
-#pages-list .form-check {
-    direction: rtl;           /* שומר על כתיבה עברית */
+/* שורת בחר הכל – שתתנהג כמו שאר הפריטים */
+#pages-list .select-all {
     display: flex;
-    justify-content: flex-start; /* מציב בצד שמאל */
-    gap: 1.8rem;
+    flex-direction: row;      /* תיבה + טקסט בשורה אחת */
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;    /* רווח מתחת לבחר הכל */
+    width: 100%;
 }
 
-/* מצמיד את כל הרשימה לשמאל */
-#pages-list .form-check-label .form-check-input {
-  text-align: right;
+#pages-list {
+    display: flex;
+    flex-direction: column;   /* מסדר את הילדים (בחר־הכל + רשימת עמודים) אחד מתחת לשני */
+    gap: 1rem;                /* רווח בין הכותרת לרשימה */
+    direction: rtl;
+    align-items: flex-start;  /* שומר יישור לימין */
 }
+
+#pages-list .select-all {
+    display: block;           /* מבטיח שורה נפרדת */
+}
+
+#pages-list #page-items {
+    display: flex;
+    flex-direction: column;   /* כל הצ'קבוקסים של העמודים בעמודה אחת */
+    gap: 0.5rem;
+}
+
+#pages-list .form-check {
+    display: flex;
+    flex-direction: row-reverse; /* תיבה מימין לטקסט */
+    gap: 0.5rem;
+}
+
+
+
+
+/* סדר תיבה–טקסט */
+#pages-list .form-check-input { order: 1; margin: 0; }
+#pages-list .form-check-label { order: 2; cursor: pointer; }
+
 
 
