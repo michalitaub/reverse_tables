@@ -22,7 +22,7 @@ The application uses Python to:
 3.  Allows the user to specify which pages require remediation.
 4.  Processes the selected pages, effectively "reversing" the table reading order tags.
 5.  Outputs a new, accessible PDF document.
-##  Image of the interface in action
+## 🖼️ Image of the interface in action
 <img width="465" height="470" alt="image" src="https://github.com/user-attachments/assets/4bbf3c37-028b-411e-a8fb-38ce5a39f116" />
 
 ## 🛠️ Technologies Used
